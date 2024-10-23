@@ -1,0 +1,76 @@
+a. Implement a python program to Importing Datasets and demonstrate the basic 
+operations on them w.r.t Pandas. 
+1. Importing Dataset: 
+import pandas as pd 
+df = pd.read_csv('csv.csv') 
+print(df.to_string())
+
+
+2. Cleaning the Data 
+#display first and last 5 rows 
+import pandas as pd 
+df = pd.read_csv('csv.csv') 
+print(df)
+
+
+#display max rows 
+import pandas as pd 
+print(pd.options.display.max_rows) 
+
+
+import pandas as pd
+pd.options.display.max_rows = 50
+df pd.read_csv('csv.csv')
+print(df)
+
+print(df.tail())
+
+print(df.info())
+
+import pandas as pd
+df pd.read_csv('csv.csv')
+new_df df.dropna()
+print(new_df.to_string())
+
+or
+
+
+import pandas as pd 
+df = pd.read_csv('csv1.csv') 
+print(df.to_string()) 
+print("*1")
+print(df)
+print("*2")
+print(pd.options.display.max_rows)
+print("*3")
+print(df.tail())
+print("*4")
+print(df.info())
+print("*5")
+newdf=df.dropna()
+print(newdf.to_string())
+
+
+B. Implement a Python program to demonstrate the working of 
+DataFrames using Pandas.
+
+import pandas as pd 
+data = {'name': ['Alice', 'Bob', 'Charles', 'David', 'Eric'], 
+'year': [2017, 2017, 2017, 2017, 2017], 
+'salary': [40000, 24000, 31000, 20000, 30000]} 
+data1 = pd.DataFrame({'Name': ['Billy', 'Brian', 'Bran', 'Bryce', 'Betty'], 
+'subject_id':['sub2','sub4','sub3','sub6','sub5'], 
+'Marks_scored':[89,80,79,97,88]}) 
+df = pd.DataFrame(data, index = ['Acme', 'Acme', 'Bilbao', 'Bilbao', 'Bilbao']) 
+print(df) 
+print("*")
+# filtering option
+df_filtered = df.query('salary>30000') 
+print(df_filtered) 
+print("*")
+
+df_filtered1 = df[(df.salary >= 30000) & (df.year == 2017)] 
+print(df_filtered1) 
+
+
+
